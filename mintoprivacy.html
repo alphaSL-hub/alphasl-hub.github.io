@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Minto Money Manager</title>
+  <meta name="description" content="Privacy Policy for Minto Money Manager Android & iOS Application." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0f1d;
+      --bg-secondary: #111827;
+      --bg-card: rgba(17, 24, 39, 0.75);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --text-primary: #f3f4f6;
+      --text-secondary: #9ca3af;
+      --text-muted: #6b7280;
+      --accent: #10b981;
+      --accent-hover: #059669;
+      --accent-soft: rgba(16, 185, 129, 0.12);
+      --accent-blue: #3b82f6;
+      --accent-blue-soft: rgba(59, 130, 246, 0.12);
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      padding: 0;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Ambient Background Glow */
+    .bg-glow {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      max-width: 1200px;
+      height: 400px;
+      background: radial-gradient(circle at 50% -20%, rgba(16, 185, 129, 0.18) 0%, rgba(59, 130, 246, 0.1) 40%, transparent 80%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background-color: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      margin-bottom: 18px;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--accent);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #ffffff 40%, #9ca3af 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .meta-info {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    /* Card Highlights */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .highlight-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .highlight-card:hover {
+      border-color: rgba(16, 185, 129, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .highlight-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .highlight-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 4px;
+      color: var(--text-primary);
+    }
+
+    .highlight-desc {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    /* Content Box */
+    .content-box {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    section {
+      margin-bottom: 36px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 1.2rem;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    p {
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+      font-size: 1rem;
+    }
+
+    p strong {
+      color: var(--text-primary);
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 16px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      color: var(--text-secondary);
+      font-size: 0.975rem;
+    }
+
+    li::before {
+      content: "•";
+      color: var(--accent);
+      font-size: 1.3rem;
+      position: absolute;
+      left: 6px;
+      top: -3px;
+    }
+
+    .note-callout {
+      background: var(--accent-soft);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .note-callout p {
+      color: #e5e7eb;
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: text-decoration 0.2s;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .container {
+        padding: 32px 16px 60px;
+      }
+      .content-box {
+        padding: 24px;
+      }
+      h1 {
+        font-size: 1.85rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <div class="container">
+    <header>
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Privacy First &amp; Local Storage
+      </div>
+      <h1>Privacy Policy</h1>
+      <p class="meta-info">
+        <strong>Application:</strong> Minto Money Manager &bull; <strong>Effective Date:</strong> August 31, 2026
+      </p>
+    </header>
+
+    <!-- Key Highlights Cards -->
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon">🔒</div>
+        <div class="highlight-title">100% Local Storage</div>
+        <div class="highlight-desc">Your financial transactions and records never leave your device.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">👁️</div>
+        <div class="highlight-title">No Account Required</div>
+        <div class="highlight-desc">Use the app immediately with zero signups or personal credential uploads.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🛡️</div>
+        <div class="highlight-title">On-Device Biometrics</div>
+        <div class="highlight-desc">Biometric lock stays managed securely by your operating system.</div>
+      </div>
+    </div>
+
+    <!-- Main Content Box -->
+    <div class="content-box">
+      <section>
+        <h2>1. Introduction</h2>
+        <p>
+          Welcome to <strong>Minto Money Manager</strong> ("we", "our", or "the app"). We respect your privacy and are committed to protecting your personal information. This Privacy Policy outlines how your data is handled when you use our mobile application.
+        </p>
+        <p>
+          By downloading and using Minto Money Manager, you agree to the collection and use of information in accordance with this policy.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Information We Collect &amp; How It Is Handled</h2>
+        <p>
+          Minto Money Manager is designed with a <strong>privacy-first, offline-first philosophy</strong>:
+        </p>
+        <ul>
+          <li>
+            <strong>Financial and Transaction Records:</strong> All your financial entries, including income, expenses, budgets, categories, and account balances, are stored purely locally on your device in a private SQLite database. We do not host, store, or transmit your financial details to any external cloud server.
+          </li>
+          <li>
+            <strong>Biometric Data:</strong> If you choose to enable Biometric/Fingerprint App Lock, authentication is performed locally via your device's native operating system (Android BiometricPrompt / iOS LocalAuthentication). The app does not have access to, nor does it store, your fingerprint, face scan, or raw biometric data.
+          </li>
+          <li>
+            <strong>On-Device Machine Learning:</strong> Smart category predictions and financial insights utilize on-device machine learning models (TensorFlow Lite). Your transaction data is processed locally without communicating with cloud AI services.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. Third-Party Services &amp; Advertisements</h2>
+        <p>
+          The application may integrate third-party services that may collect information used to identify you or provide services:
+        </p>
+        <ul>
+          <li>
+            <strong>Google AdMob (Google LLC):</strong> We display ads via Google Mobile Ads SDK to support the development and maintenance of the app. Google AdMob may collect and process device identifiers, IP addresses, cookie data, and diagnostic info in accordance with Google's Privacy Policy.
+          </li>
+        </ul>
+        <div class="note-callout">
+          <p>
+            Learn more about how Google uses data from apps by visiting 
+            <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google's Advertising &amp; Privacy Policies</a>.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>4. Device Permissions</h2>
+        <p>
+          To provide core functionalities, the app may request specific system permissions:
+        </p>
+        <ul>
+          <li><strong>USE_BIOMETRIC / USE_FINGERPRINT:</strong> Required only if you enable app lock for biometric authentication.</li>
+          <li><strong>INTERNET &amp; NETWORK STATE:</strong> Used exclusively to fetch advertising content and verify network connectivity for ads.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. Data Retention, Backup &amp; Deletion</h2>
+        <p>
+          Because your financial data is strictly stored locally on your device:
+        </p>
+        <ul>
+          <li><strong>Full User Control:</strong> You can edit, reset, or delete your transaction data at any time from within the app settings.</li>
+          <li><strong>Uninstallation:</strong> Uninstalling the application or clearing the application's storage/cache from your device settings permanently removes all locally stored financial records.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. Children's Privacy</h2>
+        <p>
+          Minto Money Manager does not knowingly collect or solicit personal information from children under the age of 13. If you believe that a child has provided us with personal information, please contact us so we can take necessary action.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>
+          We may update our Privacy Policy periodically. We encourage you to review this page periodically for any updates. Changes are effective immediately upon posting to this page.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Contact Us</h2>
+        <p>
+          If you have questions, feedback, or concerns regarding this Privacy Policy, please contact us:
+        </p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:support@mintomanger.com">support@mintomanger.com</a> (or your developer contact email)</li>
+          <li><strong>Developer / Organization:</strong> Alpha</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Minto Money Manager. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
